@@ -8,11 +8,5 @@ class Header {
 	
 	render() {
 		console.log("reuse");
-		
-		if (WMEnv.isIOS) {
-			iOSLogicFunc();
-		} else {
-			console.log("新增Android 逻辑");
-		}
 	}
 }
