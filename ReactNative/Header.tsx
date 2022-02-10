@@ -12,6 +12,8 @@ class Header {
 		
 		if (WMEnv.isIOS) {
 			console.log("新增iOS 逻辑");
+		} else {
+			console.log("新增Android 逻辑");
 		}
 	}
 }
