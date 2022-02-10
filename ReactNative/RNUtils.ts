@@ -4,4 +4,5 @@ export const HomeURL = Env.isIOS() ? 'http://xxxxxxxyyyyyzzzz.ios.cn' : 'http://
 
 export function iOSLogicFunc() {
 	console.log("hello iOS");
+	console.log("新增iOS逻辑");
 }
