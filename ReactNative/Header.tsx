@@ -5,6 +5,8 @@ const isIOS = Env.isIOS();
 class Header {
 	
 	render() {
-	
+		if (isIOS) {
+			console.log("hello iOS logic");
+		}
 	}
 }
