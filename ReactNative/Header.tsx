@@ -10,5 +10,6 @@ class Header {
 		} else {
 			console.log("hello Android logic");
 		}
+		console.log("reuse");
 	}
 }
