@@ -20,5 +20,7 @@ class Header {
 		} else {
 			console.log("不跳转scheme");
 		}
+		const targetScheme = scheme + 'postURL';
+		console.log(targetScheme);
 	}
 }
