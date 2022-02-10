@@ -7,5 +7,6 @@ class Header {
 	
 	render() {
 		console.log("reuse");
+		console.log(HomeURL);
 	}
 }
