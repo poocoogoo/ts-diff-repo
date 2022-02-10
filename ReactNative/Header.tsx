@@ -8,5 +8,16 @@ class Header {
 	
 	render() {
 		console.log("reuse");
+		let scheme = '';
+		if (Env.isWM()) {
+			scheme = 'ddd_wm';
+		} else {
+			scheme = 'ddd_channel';
+		}
+		if (scheme.length > 0) {
+			console.log("跳转scheme");
+		} else {
+			console.log("不跳转scheme");
+		}
 	}
 }
