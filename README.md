@@ -1,5 +1,6 @@
 # 测试用例
 
+## React Native 测试用例
 | 序号 | begin commit | end commit | 期望结果 | 
 | ---- | ------------- | -------- | --------- |
 | 1    |      a631d35f682d496eac9886ff869534429fba6788         |    d8c4a54d76864fb750ad0ee2590a7588e0c56a15      |    不涉及多端      | 
@@ -23,6 +24,15 @@
 | 19    |          27c407f2e95bfa7a8648e7ef48495dc5a66125db     |     918ea03b02abc85e4b0580bbd2340f8f923b3cc5     |    涉及多端  采用变量引用，并且关联的 targetScheme受到影响。【需要输出提示】     |
 | 20    |         918ea03b02abc85e4b0580bbd2340f8f923b3cc5      |    e7e2fe83c825a77a428df694aa6136223d43eb3f      |    不涉及多端  删掉业务端代码逻辑       |
 | 21    |        e7e2fe83c825a77a428df694aa6136223d43eb3f       |     de73eb2f572331382759d0bfb99585874d2e7f27     |    涉及多端  引用了多端差异的函数      |
+| 22    |       de73eb2f572331382759d0bfb99585874d2e7f27        |     903caf55f657cfbeadb1fcb5dc5aee47955be5c6     |    涉及多端  调用了子包的多端差异的函数      |
+| 23    |       903caf55f657cfbeadb1fcb5dc5aee47955be5c6        |     2a4c70bef4e2ec15e7fa3ede32fcae4fa4f053ce     |    涉及多端  调用了NativeModule，shareModule是一个多端差异的函数      |
 
 
 
+## Mach 测试用例
+| 序号 | begin commit | end commit | 期望结果 | 
+| ---- | ------------- | -------- | --------- |
+| 1    |    2a4c70bef4e2ec15e7fa3ede32fcae4fa4f053ce           |   2b482f44e93b69fc518500c8fdedeb0e5075418a       |     不涉及多端     | 
+| 2    |    2b482f44e93b69fc518500c8fdedeb0e5075418a           |   0a64181674a86ba23f59cbe4fd6f1ceeee40936a       |     涉及多端  引入了iOS和Android 不同平台的逻辑     | 
+| 3    |    0a64181674a86ba23f59cbe4fd6f1ceeee40936a           |   5e58cbba4c450f81da9dac3cbff0f7f04e6b9722       |     涉及多端  Image组件的属性里有iOS和Android不同的属性值     | 
+| 4    |    5e58cbba4c450f81da9dac3cbff0f7f04e6b9722           |   848fa182530c1b080e2a7972bfd049fd955d0fb7       |     涉及多端  Mach 调用了TS与Native通信的桥，包含了多端差异的代码     | 
