@@ -1,5 +1,5 @@
 import {Component} from "react";
-import {View, ScrollViewComponent, Text} from "react-native";
+import {View, ScrollViewComponent, Text, Image} from "react-native";
 
 class MachView extends Component<any, any> {
 	render() {
@@ -8,6 +8,7 @@ class MachView extends Component<any, any> {
 		return (<View>
 			{ isAndroid && <Text> Android </Text>}
 			{ isIOS && <Text> iOS logic</Text>}
+			<Image style={{"top": (this.props.env.osName === 'ios' ? "20dp" : "30dp")}}> </Image>
 		</View>);
 	}
 }
