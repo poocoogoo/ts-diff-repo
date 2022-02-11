@@ -1,6 +1,4 @@
-import { Env } from "./Env";
-import {appBizId, iOSLogicFunc} from "./RNUtils";
-import { WMEnv} from "./WMEnv";
+import { Env, WMEnv, iOSLogicFunc, appBizId} from "ts-diff-common";
 
 const isIOS = Env.isIOS();
 const isWM = Env.isWM();
